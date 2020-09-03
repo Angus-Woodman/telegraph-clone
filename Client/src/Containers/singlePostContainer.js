@@ -5,7 +5,8 @@ class SinglePostsContainer extends Component {
   render(){
         return(
             <section id="singlePostsContainer">
-              <p> Single Post </p>
+              <h1> Single Post </h1>
+              {console.log(this.props.posts)}
             </section>
         )
     }
