@@ -14,7 +14,7 @@ handleInput = (e) => {
                 <input type="text" name="name" placeholder="Pseudonym" onChange={this.handleInput}/>
                 <input type="text" name="title" placeholder="Title" onChange={this.handleInput}/>
                 <input type="text" name="message" placeholder="Message" onChange={this.handleInput}/>
-                <input type="submit" value="Submit"/>
+                <input type="submit" value="Publish"/>
               </form>
             </section>
         )
