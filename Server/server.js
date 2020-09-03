@@ -42,14 +42,15 @@ server.get('/posts/name/:name', (req, res) => {
         .catch(err => res.status(500).end())
 })
 
-// // Create post route
-// router.post('/posts', (req, res) => {
-//     db.run(create, [req.body.name, req.body.title, req.body.content])
-//         .then(resp => {
-//             const post = resp.rows[0]
-//             res.status(201).json(post)
-//         })
-//         .catch(err => res.status(500).end())
-// })
+// Create post route
+server.post('/posts', (req, res) => {
+  console.log(req.body)
+    db.run(create, [req.body.name, req.body.title, req.body.content])
+        .then(resp => {
+            const post = resp.rows[0]
+            res.status(201).json(post)
+        })
+        .catch(err => res.status(500).end())
+})
 
 server.listen(port, () => console.log(`Express now departing from http://localhost:${port}!`))
